@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>インドネシア語オンラインレッスン | LaLa GLOBAL LANGUAGE</title>
+    <meta name="description" content="日本人にとって学びやすいインドネシア語を、バイリンガル講師とマンツーマンで。LaLa GLOBAL LANGUAGEのオンラインレッスンで、90日で会話力を身につけましょう。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ヘッダー */
+        header {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .header-cta {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255,107,53,0.4);
+        }
+
+        /* ファーストビュー */
+        .hero {
+            background: url('AdobeStock_196758230_Preview.jpeg') center center / cover no-repeat;
+            padding: 160px 0 100px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,107,53,0.85) 0%, rgba(247,147,30,0.8) 50%, rgba(255,179,71,0.75) 100%);
+            z-index: 0;
+        }
+
+        .hero::after {
+            display: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3), 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-points {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-point {
+            background: rgba(255,255,255,0.2);
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        /* CTAボタン */
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #ff6b35;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-button.orange {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: #fff;
+        }
+
+        .cta-note {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* セクション共通 */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Problem セクション */
+        .problem {
+            background: #fff5f0;
+        }
+
+        .problem-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .problem-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #ff6b35;
+        }
+
+        .problem-item h3 {
+            font-size: 1.1rem;
+            color: #ff6b35;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .problem-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Affinity セクション */
+        .affinity {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-align: center;
+        }
+
+        .affinity .section-title h2 {
+            color: #fff;
+        }
+
+        .affinity-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .affinity-quote {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .affinity-text {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            line-height: 2;
+        }
+
+        /* Solution セクション */
+        .solution {
+            background: #fff;
+        }
+
+        .solution-box {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            border-radius: 20px;
+            padding: 50px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .solution-box h3 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .solution-box p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .solution-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .solution-feature {
+            text-align: center;
+        }
+
+        .solution-feature-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .solution-feature p {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        /* Benefit セクション */
+        .benefit {
+            background: #f8f9fa;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            color: #ff6b35;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Evidence セクション */
+        .evidence {
+            background: #fff;
+        }
+
+        .evidence-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .evidence-stat {
+            text-align: center;
+        }
+
+        .evidence-stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ff6b35;
+            line-height: 1;
+        }
+
+        .evidence-stat-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #ff6b35;
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 500;
+        }
+
+        /* Contents（料金）セクション */
+        .contents {
+            background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+            color: #fff;
+        }
+
+        .contents .section-title h2 {
+            color: #fff;
+        }
+
+        .contents .section-title p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .pricing-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.popular {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .pricing-card.popular::before {
+            content: '人気No.1';
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: #ff6b35;
+            color: #fff;
+            padding: 5px 40px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+        }
+
+        .pricing-name {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+
+        .pricing-detail {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .pricing-unit {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .pricing-features {
+            text-align: left;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .pricing-features li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            list-style: none;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: #43cea2;
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+        }
+
+        .pricing-note {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .pricing-note p {
+            font-size: 0.95rem;
+        }
+
+        /* 90日ロードマップ */
+        .roadmap {
+            margin-top: 50px;
+        }
+
+        .roadmap h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .roadmap-steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .roadmap-step {
+            flex: 1;
+            min-width: 200px;
+            background: rgba(255,255,255,0.15);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .roadmap-step-month {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .roadmap-step-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .roadmap-step-desc {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Offer セクション */
+        .offer {
+            background: #fff5f0;
+        }
+
+        .offer-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .offer-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .offer-card:hover {
+            border-color: #ff6b35;
+        }
+
+        .offer-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .offer-card h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .offer-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+
+        .offer-price span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .offer-desc {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* Narrow セクション */
+        .narrow {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+            text-align: center;
+        }
+
+        .narrow .section-title h2 {
+            color: #fff;
+        }
+
+        .narrow-box {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .narrow-tag {
+            display: inline-block;
+            background: #fff;
+            color: #f5576c;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .narrow-box h3 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .narrow-price {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .narrow-price span {
+            font-size: 1.2rem;
+        }
+
+        .narrow-original {
+            font-size: 1rem;
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+
+        .narrow-desc {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        /* Action（CTA）セクション */
+        .action {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ffb347 100%);
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .action h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .action p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .action .cta-button {
+            padding: 20px 60px;
+            font-size: 1.2rem;
+        }
+
+        /* FAQ セクション */
+        .faq {
+            background: #f8f9fa;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px 25px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #ff6b35;
+        }
+
+        .faq-answer {
+            padding: 0 25px 20px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* フッター */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 50px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo img {
+            height: 35px;
+            width: auto;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-copy {
+            text-align: center;
+            color: #888;
+            font-size: 0.85rem;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 500px;
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-points {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-point {
+                padding: 12px 20px;
+            }
+
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+
+            .pricing-card.popular {
+                transform: none;
+            }
+
+            .evidence-stats {
+                gap: 30px;
+            }
+
+            .evidence-stat-number {
+                font-size: 2.5rem;
+            }
+
+            .roadmap-steps {
+                flex-direction: column;
+            }
+
+            .narrow-box {
+                padding: 30px 20px;
+            }
+
+            .narrow-price {
+                font-size: 2.2rem;
+            }
+
+            .action h2 {
+                font-size: 1.6rem;
+            }
+
+            .header-cta {
+                padding: 8px 15px;
+                font-size: 0.8rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-links a {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo"><img src="lala-logo.png" alt="LaLa GLOBAL LANGUAGE"></div>
+            <a href="https://lala-global-language.com/contact/" class="header-cta">無料相談はこちら</a>
+        </div>
+    </header>
+
+    <!-- ファーストビュー -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="hero-tag">35言語対応のオンライン語学スクール</span>
+            <h1>日本人が最も学びやすい<br>外国語、それがインドネシア語</h1>
+            <p class="hero-subtitle">バイリンガル講師とマンツーマンで学ぶ<br>オンラインインドネシア語レッスン</p>
+            <div class="hero-points">
+                <div class="hero-point">ローマ字読みで通じる</div>
+                <div class="hero-point">時制変化なし</div>
+                <div class="hero-point">90日で会話力習得</div>
+            </div>
+            <a href="https://lala-global-language.com/contact/" class="cta-button">まずは体験レッスンに申し込む</a>
+            <p class="cta-note">30分レッスン+20分カウンセリング 1,100円</p>
+        </div>
+    </section>
+
+    <!-- Problem（問題提起） -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-title">
+                <h2>こんなお悩みありませんか？</h2>
+            </div>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <h3>何から始めればいいかわからない</h3>
+                    <p>インドネシア語を学びたいけど、教材選びや学習方法がわからず、最初の一歩が踏み出せない...</p>
+                </div>
+                <div class="problem-item">
+                    <h3>独学では発音がわからない</h3>
+                    <p>テキストを読んでも正しい発音がわからない。自分の発音が合っているか確認できない...</p>
+                </div>
+                <div class="problem-item">
+                    <h3>職場でコミュニケーションが取れない</h3>
+                    <p>インドネシア人のスタッフや技能実習生と意思疎通ができず、仕事に支障が出ている...</p>
+                </div>
+                <div class="problem-item">
+                    <h3>旅行でもっと話したかった</h3>
+                    <p>バリ島旅行で現地の人と会話できず、もったいない思いをした。次こそは話せるようになりたい...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affinity（親近感・共感） -->
+    <section class="affinity">
+        <div class="container">
+            <div class="affinity-content">
+                <p class="affinity-quote">「インドネシア語って<br>難しそう...」</p>
+                <p class="affinity-text">
+                    そう思っていませんか？<br><br>
+                    実は、インドネシア語は<strong>日本人にとって最も学びやすい言語の一つ</strong>なんです。<br><br>
+                    忙しくて通学する時間がない方も、完全初心者の方も大丈夫。<br>
+                    日本語が話せる講師が、あなたのペースに合わせて丁寧にサポートします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution（解決策） -->
+    <section class="solution">
+        <div class="container">
+            <div class="section-title">
+                <h2>解決策はここにあります</h2>
+            </div>
+            <div class="solution-box">
+                <h3>LaLa GLOBAL LANGUAGEの<br>オンラインマンツーマンレッスン</h3>
+                <p>35言語に対応する実績あるスクールが、<br>あなたのインドネシア語学習を全力でサポートします</p>
+                <div class="solution-features">
+                    <div class="solution-feature">
+                        <div class="solution-feature-icon">👨‍🏫</div>
+                        <p>バイリンガル講師<br>（日本語N2以上）</p>
+                    </div>
+                    <div class="solution-feature">
+                        <div class="solution-feature-icon">💻</div>
+                        <p>完全オンライン<br>場所を選ばない</p>
+                    </div>
+                    <div class="solution-feature">
+                        <div class="solution-feature-icon">🎯</div>
+                        <p>目的別カリキュラム<br>仕事・旅行・趣味</p>
+                    </div>
+                    <div class="solution-feature">
+                        <div class="solution-feature-icon">🤝</div>
+                        <p>専任コンシェルジュ<br>学習サポート</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefit（メリット） -->
+    <section class="benefit">
+        <div class="container">
+            <div class="section-title">
+                <h2>インドネシア語が選ばれる理由</h2>
+                <p>日本人にとって学びやすい言語No.1</p>
+            </div>
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔤</div>
+                    <h3>ローマ字読みで通じる</h3>
+                    <p>母音は日本語と同じ5つ（a, i, u, e, o）。新しい文字を覚える必要がなく、ローマ字のまま読めば通じます。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>文法がシンプル</h3>
+                    <p>複雑な時制変化や動詞の活用がほとんどありません。単語を並べるだけで文章が作れます。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📅</div>
+                    <h3>90日で会話レベルに</h3>
+                    <p>1ヶ月目は基本フレーズ、2ヶ月目は目的別単語、3ヶ月目で実践会話。計画的に上達できます。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌏</div>
+                    <h3>ビジネスチャンスが広がる</h3>
+                    <p>世界第4位の人口を持つ経済成長国。日本企業の進出も増加中で、需要が高まっています。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏝️</div>
+                    <h3>旅行がもっと楽しく</h3>
+                    <p>バリ島やジャカルタで現地の人と会話。ローカルな体験ができ、旅行の満足度が格段にアップします。</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏰</div>
+                    <h3>好きな時間に学べる</h3>
+                    <p>完全オンラインだから通学不要。早朝や夜間など、あなたのライフスタイルに合わせてレッスン可能。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evidence（実績・証拠） -->
+    <section class="evidence">
+        <div class="container">
+            <div class="section-title">
+                <h2>選ばれ続けている理由</h2>
+            </div>
+            <div class="evidence-stats">
+                <div class="evidence-stat">
+                    <div class="evidence-stat-number">4.8</div>
+                    <div class="evidence-stat-label">総合評価（5点満点）</div>
+                </div>
+                <div class="evidence-stat">
+                    <div class="evidence-stat-number">356</div>
+                    <div class="evidence-stat-label">件のレビュー</div>
+                </div>
+                <div class="evidence-stat">
+                    <div class="evidence-stat-number">35</div>
+                    <div class="evidence-stat-label">言語対応</div>
+                </div>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-text">バリ旅行の前に受講しました。たった1ヶ月でしたが、現地で簡単な会話ができるようになり、お店の人とも仲良くなれました。次の旅行までにもっと上達したいです！</p>
+                    <p class="testimonial-author">30代女性・旅行目的</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">職場のインドネシア人スタッフとコミュニケーションが取れるようになり、仕事がスムーズに進むようになりました。講師が日本語で説明してくれるので、初心者でも安心でした。</p>
+                    <p class="testimonial-author">40代男性・ビジネス目的</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">独学で挫折した経験がありましたが、マンツーマンで発音を直してもらえるのが良かったです。コンシェルジュの方が学習計画も一緒に考えてくれて、モチベーションが続いています。</p>
+                    <p class="testimonial-author">20代女性・趣味</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contents（料金プラン） -->
+    <section class="contents">
+        <div class="container">
+            <div class="section-title">
+                <h2>料金プラン</h2>
+                <p>あなたに合ったプランをお選びください</p>
+            </div>
+            <div class="pricing-table">
+                <div class="pricing-card">
+                    <div class="pricing-name">Sコース</div>
+                    <div class="pricing-detail">お試しにぴったり</div>
+                    <div class="pricing-price">16,500<span>円〜</span></div>
+                    <div class="pricing-unit">50分×4回/月</div>
+                    <ul class="pricing-features">
+                        <li>マンツーマンレッスン</li>
+                        <li>自由なスケジュール設定</li>
+                        <li>日本語対応講師</li>
+                        <li>学習サポート付き</li>
+                    </ul>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="pricing-name">Mコース</div>
+                    <div class="pricing-detail">しっかり学びたい方に</div>
+                    <div class="pricing-price">77,000<span>円〜</span></div>
+                    <div class="pricing-unit">50分×20回/5ヶ月</div>
+                    <ul class="pricing-features">
+                        <li>マンツーマンレッスン</li>
+                        <li>自由なスケジュール設定</li>
+                        <li>日本語対応講師</li>
+                        <li>学習サポート付き</li>
+                        <li>1回あたり3,850円〜</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-name">Lコース</div>
+                    <div class="pricing-detail">本格的にマスター</div>
+                    <div class="pricing-price">143,000<span>円〜</span></div>
+                    <div class="pricing-unit">50分×40回/10ヶ月</div>
+                    <ul class="pricing-features">
+                        <li>マンツーマンレッスン</li>
+                        <li>自由なスケジュール設定</li>
+                        <li>日本語対応講師</li>
+                        <li>学習サポート付き</li>
+                        <li>1回あたり3,575円〜</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pricing-note">
+                <p>※ペア（2名）、トリオ（3名）での受講で割引あり<br>
+                ※入会金16,500円（キャンペーン適用で無料になることも）</p>
+            </div>
+
+            <div class="roadmap">
+                <h3>90日学習ロードマップ</h3>
+                <div class="roadmap-steps">
+                    <div class="roadmap-step">
+                        <div class="roadmap-step-month">1ヶ月目</div>
+                        <div class="roadmap-step-title">基本フレーズ・発音</div>
+                        <div class="roadmap-step-desc">挨拶、自己紹介など<br>基本10フレーズを習得</div>
+                    </div>
+                    <div class="roadmap-step">
+                        <div class="roadmap-step-month">2ヶ月目</div>
+                        <div class="roadmap-step-title">目的別単語・簡単会話</div>
+                        <div class="roadmap-step-desc">旅行・仕事など<br>目的に応じた語彙拡大</div>
+                    </div>
+                    <div class="roadmap-step">
+                        <div class="roadmap-step-month">3ヶ月目</div>
+                        <div class="roadmap-step-title">実践ロールプレイ</div>
+                        <div class="roadmap-step-desc">実際のシーンを想定した<br>実践的な会話練習</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer（提案・オファー） -->
+    <section class="offer">
+        <div class="container">
+            <div class="section-title">
+                <h2>まずはここから始めましょう</h2>
+            </div>
+            <div class="offer-cards">
+                <div class="offer-card">
+                    <span class="offer-badge">初めての方へ</span>
+                    <h3>体験レッスン</h3>
+                    <div class="offer-price">1,100<span>円（税込）</span></div>
+                    <p class="offer-desc">30分のレッスン + 20分のカウンセリング<br>あなたに最適な学習プランをご提案します</p>
+                    <a href="https://lala-global-language.com/contact/" class="cta-button orange">体験レッスンに申し込む</a>
+                </div>
+                <div class="offer-card">
+                    <span class="offer-badge">入会特典</span>
+                    <h3>入会金無料キャンペーン</h3>
+                    <div class="offer-price">0<span>円</span></div>
+                    <p class="offer-desc">通常16,500円の入会金が<br>キャンペーン期間中は無料！</p>
+                    <a href="https://lala-global-language.com/contact/" class="cta-button orange">詳細を問い合わせる</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Narrow（限定性） -->
+    <section class="narrow">
+        <div class="container">
+            <div class="section-title">
+                <h2>期間限定プログラム</h2>
+            </div>
+            <div class="narrow-box">
+                <span class="narrow-tag">新春限定</span>
+                <h3>ゴガチャレ！プログラム</h3>
+                <div class="narrow-original">通常価格 16,500円</div>
+                <div class="narrow-price">11,000<span>円（税込）</span></div>
+                <p class="narrow-desc">50分×4回のレッスンを特別価格で！<br>さらに継続入会で入会金16,500円が無料に</p>
+                <a href="https://lala-global-language.com/contact/" class="cta-button">今すぐ申し込む</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>よくある質問</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">初心者でも大丈夫ですか？</div>
+                    <div class="faq-answer">はい、全くの初心者から上級者まで対応しています。講師は全員日本語N2以上のバイリンガルですので、日本語でのサポートが可能です。安心して始められます。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">レッスンの振替はできますか？</div>
+                    <div class="faq-answer">前日の19時までにメールでご連絡いただければ、月1回まで振替が可能です。急な予定変更にも対応できます。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">支払い方法は何がありますか？</div>
+                    <div class="faq-answer">クレジットカード、銀行振込、口座振替に対応しています。法人様は請求書払いも可能です。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">どのくらいで話せるようになりますか？</div>
+                    <div class="faq-answer">個人差はありますが、週1回のレッスンで約3ヶ月（12回）で簡単な日常会話ができるレベルになる方が多いです。目標に合わせたカリキュラムをご提案します。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action（最終CTA） -->
+    <section class="action">
+        <div class="container">
+            <h2>インドネシア語で、<br>あなたの世界を広げませんか？</h2>
+            <p>まずは体験レッスンで、LaLaの学習スタイルをお試しください。<br>専任コンシェルジュがあなたの目標に合った学習プランをご提案します。</p>
+            <div class="action-buttons">
+                <a href="https://lala-global-language.com/contact/" class="cta-button">無料相談・体験レッスンに申し込む</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><img src="lala-logo.png" alt="LaLa GLOBAL LANGUAGE"></div>
+                <div class="footer-links">
+                    <a href="https://lala-global-language.com/" target="_blank">公式サイト</a>
+                    <a href="https://lala-global-language.com/contact/" target="_blank">お問い合わせ</a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                &copy; LaLa GLOBAL LANGUAGE. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
