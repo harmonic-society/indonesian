@@ -197,29 +197,12 @@
         /* Problem セクション */
         .problem {
             background: #fff5f5;
-            overflow: visible;
-        }
-
-        .problem-wrapper {
-            position: relative;
         }
 
         .problem-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-        }
-
-        .problem-illustration {
-            position: absolute;
-            left: -100px;
-            bottom: 0;
-            width: 180px;
-        }
-
-        .problem-illustration img {
-            width: 100%;
-            height: auto;
         }
 
         .problem-item {
@@ -818,10 +801,6 @@
 
         /* レスポンシブ */
         @media (max-width: 768px) {
-            .problem-illustration {
-                display: none;
-            }
-
             .hero {
                 min-height: 500px;
                 padding: 120px 0 60px;
@@ -925,27 +904,22 @@
             <div class="section-title">
                 <h2>こんなお悩みありませんか？</h2>
             </div>
-            <div class="problem-wrapper">
-                <div class="problem-list">
-                    <div class="problem-item">
-                        <h3>何から始めればいいかわからない</h3>
-                        <p>インドネシア語を学びたいけど、教材選びや学習方法がわからず、最初の一歩が踏み出せない...</p>
-                    </div>
-                    <div class="problem-item">
-                        <h3>独学では発音がわからない</h3>
-                        <p>テキストを読んでも正しい発音がわからない。自分の発音が合っているか確認できない...</p>
-                    </div>
-                    <div class="problem-item">
-                        <h3>職場でコミュニケーションが取れない</h3>
-                        <p>インドネシア人のスタッフや技能実習生と意思疎通ができず、仕事に支障が出ている...</p>
-                    </div>
-                    <div class="problem-item">
-                        <h3>旅行でもっと話したかった</h3>
-                        <p>バリ島旅行で現地の人と会話できず、もったいない思いをした。次こそは話せるようになりたい...</p>
-                    </div>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <h3>何から始めればいいかわからない</h3>
+                    <p>インドネシア語を学びたいけど、教材選びや学習方法がわからず、最初の一歩が踏み出せない...</p>
                 </div>
-                <div class="problem-illustration">
-                    <img src="lala-character.png" alt="LaLaキャラクター">
+                <div class="problem-item">
+                    <h3>独学では発音がわからない</h3>
+                    <p>テキストを読んでも正しい発音がわからない。自分の発音が合っているか確認できない...</p>
+                </div>
+                <div class="problem-item">
+                    <h3>職場でコミュニケーションが取れない</h3>
+                    <p>インドネシア人のスタッフや技能実習生と意思疎通ができず、仕事に支障が出ている...</p>
+                </div>
+                <div class="problem-item">
+                    <h3>旅行でもっと話したかった</h3>
+                    <p>バリ島旅行で現地の人と会話できず、もったいない思いをした。次こそは話せるようになりたい...</p>
                 </div>
             </div>
         </div>
