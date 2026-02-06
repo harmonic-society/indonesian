@@ -199,6 +199,28 @@
             background: #fff5f5;
         }
 
+        .problem-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .problem-header .section-title {
+            margin-bottom: 0;
+        }
+
+        .problem-character {
+            width: 120px;
+            flex-shrink: 0;
+        }
+
+        .problem-character img {
+            width: 100%;
+            height: auto;
+        }
+
         .problem-list {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -801,6 +823,14 @@
 
         /* レスポンシブ */
         @media (max-width: 768px) {
+            .problem-character {
+                width: 80px;
+            }
+
+            .problem-list {
+                grid-template-columns: 1fr;
+            }
+
             .hero {
                 min-height: 500px;
                 padding: 120px 0 60px;
@@ -901,8 +931,13 @@
     <!-- Problem（問題提起） -->
     <section class="problem">
         <div class="container">
-            <div class="section-title">
-                <h2>こんなお悩みありませんか？</h2>
+            <div class="problem-header">
+                <div class="problem-character">
+                    <img src="lala-character-question.png" alt="LaLaキャラクター">
+                </div>
+                <div class="section-title">
+                    <h2>こんなお悩みありませんか？</h2>
+                </div>
             </div>
             <div class="problem-list">
                 <div class="problem-item">
