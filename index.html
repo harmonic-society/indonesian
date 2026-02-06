@@ -197,23 +197,23 @@
         /* Problem セクション */
         .problem {
             background: #fff5f5;
+            overflow: visible;
         }
 
         .problem-wrapper {
-            display: flex;
-            align-items: flex-end;
-            gap: 30px;
+            position: relative;
         }
 
         .problem-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            flex: 1;
         }
 
         .problem-illustration {
-            flex-shrink: 0;
+            position: absolute;
+            left: -100px;
+            bottom: 0;
             width: 180px;
         }
 
