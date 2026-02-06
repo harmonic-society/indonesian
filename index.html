@@ -288,7 +288,25 @@
             border-radius: 20px;
             padding: 50px;
             color: #fff;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .solution-box-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .solution-box-character {
+            flex-shrink: 0;
+            width: 280px;
+        }
+
+        .solution-box-character img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
         }
 
         .solution-box h3 {
@@ -827,6 +845,18 @@
                 width: 80px;
             }
 
+            .solution-box {
+                flex-direction: column;
+            }
+
+            .solution-box-text {
+                text-align: center;
+            }
+
+            .solution-box-character {
+                width: 200px;
+            }
+
             .problem-list {
                 grid-template-columns: 1fr;
             }
@@ -982,25 +1012,30 @@
                 <h2>解決策はここにあります</h2>
             </div>
             <div class="solution-box">
-                <h3>LaLa GLOBAL LANGUAGEの<br>オンラインマンツーマンレッスン</h3>
-                <p>35言語に対応する実績あるスクールが、<br>あなたのインドネシア語学習を全力でサポートします</p>
-                <div class="solution-features">
-                    <div class="solution-feature">
-                        <div class="solution-feature-icon">👨‍🏫</div>
-                        <p>バイリンガル講師<br>（日本語N2以上）</p>
+                <div class="solution-box-text">
+                    <h3>LaLa GLOBAL LANGUAGEの<br>オンラインマンツーマンレッスン</h3>
+                    <p>35言語に対応する実績あるスクールが、<br>あなたのインドネシア語学習を全力でサポートします</p>
+                    <div class="solution-features">
+                        <div class="solution-feature">
+                            <div class="solution-feature-icon">👨‍🏫</div>
+                            <p>バイリンガル講師<br>（日本語N2以上）</p>
+                        </div>
+                        <div class="solution-feature">
+                            <div class="solution-feature-icon">💻</div>
+                            <p>完全オンライン<br>場所を選ばない</p>
+                        </div>
+                        <div class="solution-feature">
+                            <div class="solution-feature-icon">🎯</div>
+                            <p>目的別カリキュラム<br>仕事・旅行・趣味</p>
+                        </div>
+                        <div class="solution-feature">
+                            <div class="solution-feature-icon">🤝</div>
+                            <p>専任コンシェルジュ<br>学習サポート</p>
+                        </div>
                     </div>
-                    <div class="solution-feature">
-                        <div class="solution-feature-icon">💻</div>
-                        <p>完全オンライン<br>場所を選ばない</p>
-                    </div>
-                    <div class="solution-feature">
-                        <div class="solution-feature-icon">🎯</div>
-                        <p>目的別カリキュラム<br>仕事・旅行・趣味</p>
-                    </div>
-                    <div class="solution-feature">
-                        <div class="solution-feature-icon">🤝</div>
-                        <p>専任コンシェルジュ<br>学習サポート</p>
-                    </div>
+                </div>
+                <div class="solution-box-character">
+                    <img src="lala-character-happy.png" alt="LaLaキャラクター">
                 </div>
             </div>
         </div>
